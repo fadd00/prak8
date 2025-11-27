@@ -114,7 +114,10 @@ fun ListSiswa(
     itemSiswa: List<Siswa>,
     modifier: Modifier = Modifier
 ) {
-    LazyColumn(modifier = modifier) {
+    LazyColumn(
+        modifier = modifier,
+        contentPadding = PaddingValues(vertical = dimensionResource(id = R.dimen.padding_small))
+    ) {
         items(items = itemSiswa, key = { it.id }) { person ->
             DataSiswa(
                 siswa = person,
