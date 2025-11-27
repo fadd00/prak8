@@ -1,9 +1,8 @@
 package com.sample.prak8.repository
 
+import android.app.Application
 import android.content.Context
-import com.sample.prak8.data.DatabaseSiswa
-import com.sample.prak8.repositori.RepositoriSiswa
-import com.sample.prak8.repositori.OfflineRepositoriSiswa
+import com.sample.prak8.room.DatabaseSiswa
 
 interface ContainerApp {
     val repositoriSiswa: RepositoriSiswa

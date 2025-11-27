@@ -1,4 +1,6 @@
 package com.sample.prak8.view.route
 
-class DestinasiNavigasi {
+interface DestinasiNavigasi {
+    val route: String
+    val titleRes: Int
 }

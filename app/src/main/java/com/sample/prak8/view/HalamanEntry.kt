@@ -1,5 +1,27 @@
 package com.sample.prak8.view
 
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.input.KeyboardType
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.sample.prak8.R
+import com.sample.prak8.view.route.DestinasiNavigasi
+import com.sample.prak8.viewmodel.DetailSiswa
+import com.sample.prak8.viewmodel.EntryViewModel
+import com.sample.prak8.viewmodel.UIStateSiswa
+import com.sample.prak8.viewmodel.provider.PenyediaViewModel
+import kotlinx.coroutines.launch
+
 object DestinasiEntry : DestinasiNavigasi {
     override val route = "item_entry"
     override val titleRes = R.string.entry_siswa
