@@ -6,8 +6,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.sample.prak8.view.DestinasiEntry
-import com.sample.prak8.view.DestinasiHome
+import com.sample.prak8.view.route.DestinasiEntry
+import com.sample.prak8.view.route.DestinasiHome
 import com.sample.prak8.view.EntrySiswaScreen
 import com.sample.prak8.view.HomeScreen
 

@@ -15,17 +15,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.sample.prak8.R
-import com.sample.prak8.view.route.DestinasiNavigasi
+import com.sample.prak8.view.route.DestinasiEntry
 import com.sample.prak8.viewmodel.DetailSiswa
 import com.sample.prak8.viewmodel.EntryViewModel
 import com.sample.prak8.viewmodel.UIStateSiswa
 import com.sample.prak8.viewmodel.provider.PenyediaViewModel
 import kotlinx.coroutines.launch
 
-object DestinasiEntry : DestinasiNavigasi {
-    override val route = "item_entry"
-    override val titleRes = R.string.entry_siswa
-}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

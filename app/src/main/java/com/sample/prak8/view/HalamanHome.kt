@@ -20,14 +20,10 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.sample.prak8.R
 import com.sample.prak8.room.Siswa
-import com.sample.prak8.view.route.DestinasiNavigasi
+import com.sample.prak8.view.route.DestinasiHome
 import com.sample.prak8.viewmodel.HomeViewModel
 import com.sample.prak8.viewmodel.provider.PenyediaViewModel
 
-object DestinasiHome : DestinasiNavigasi {
-    override val route = "home"
-    override val titleRes = R.string.app_name
-}
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
@@ -79,11 +75,29 @@ fun BodyHome(
         modifier = modifier
     ) {
         if (itemSiswa.isEmpty()) {
-            Text(
-                text = stringResource(R.string.no_data),
-                textAlign = TextAlign.Center,
-                style = MaterialTheme.typography.titleLarge
-            )
+            Box(
+                modifier = Modifier.fillMaxSize(),
+                contentAlignment = Alignment.Center
+            ) {
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Center
+                ) {
+                    Text(
+                        text = stringResource(R.string.no_data),
+                        textAlign = TextAlign.Center,
+                        style = MaterialTheme.typography.titleLarge,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        text = "Klik tombol + untuk menambah data siswa",
+                        textAlign = TextAlign.Center,
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            }
         } else {
             ListSiswa(
                 itemSiswa = itemSiswa,
